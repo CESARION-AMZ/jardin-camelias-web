@@ -1986,6 +1986,35 @@
           return false;
         }
       </script>
+
+      <!-- Mejores prácticas: CTA siempre visible + urgencia estacional -->
+      <a
+        href="https://wa.me/34679088119?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20visita%20al%20jard%C3%ADn"
+        target="_blank"
+        rel="noopener"
+        aria-label="Reservar visita por WhatsApp"
+        style="position: fixed; right: 18px; bottom: 18px; z-index: 60; background: #25d366; color: #fff; font-weight: 700; text-decoration: none; padding: 14px 18px; border-radius: 999px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25); font-family: inherit"
+        >💬 Reservar visita</a
+      >
+      <div
+        id="bloom"
+        style="position: fixed; left: 18px; bottom: 18px; z-index: 60; background: rgba(255, 255, 255, 0.95); color: #2c2521; border: 1px solid var(--line); padding: 10px 14px; border-radius: 999px; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); font-size: 14px; max-width: 52vw"
+      ></div>
+      <script>
+        (function () {
+          var m = new Date().getMonth() + 1;
+          var msg;
+          if (m === 12 || m === 1 || m === 2) msg = "🌸 Ahora florecen las camelias";
+          else if (m === 3) msg = "🌸 Ahora: cerezos Kazan en flor";
+          else if (m === 4) msg = "🌿 Primavera en el jardín";
+          else if (m === 5) msg = "🌹 Ahora: el mes de las rosas";
+          else if (m === 6) msg = "💙 Ahora: las hortensias en flor";
+          else if (m >= 9 && m <= 11) msg = "🍁 Ahora: el color del otoño";
+          else msg = "🌿 El jardín, en pleno verde";
+          var el = document.getElementById("bloom");
+          if (el) el.textContent = msg;
+        })();
+      </script>
     </main>
   </body>
 </html>
