@@ -1,7 +1,4 @@
-# Robots — El Jardín de Mini y Fran
-# NOTA: mientras la web esté en revisión, el <meta name="robots" content="noindex">
-# del index.html evita que Google la indexe aunque este archivo permita el rastreo.
-# Al publicar en abierto, quitar ese meta del index.html.
+# Robots — El Jardín de Mini
 
 User-agent: *
 Allow: /
